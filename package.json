@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "athena-prime": "4.4.0",
+    "dotenv": "17.4.2",
+    "postgres": "3.4.9"
+  },
+
+  "devDependencies": {
+    "@types/node": "26.5.0",
+    "esbuild": "0.28.2"
+  },
+
+  "scripts": {
+    "build": "esbuild 'src/**/*.ts' --platform=node --format=cjs --outdir=dist",
+    "start:dev": "NODE_ENV=development node dist/index.js",
+    "start:prod": "NODE_ENV=production node dist/index.js"
+  }
+}
